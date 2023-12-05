@@ -1,27 +1,13 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $nama_agenda = $this->input->post('nama_agenda', TRUE);
-  $berapa_hari = $this->input->post('berapa_hari', TRUE);
-  $tgl = $this->input->post('tgl', TRUE);
-  $tgl_mulai = $this->input->post('tgl_mulai', TRUE);
-  $tgl_selesai = $this->input->post('tgl_selesai', TRUE);
-  $jam_mulai = $this->input->post('jam_mulai', TRUE);
-  $jam_selesai = $this->input->post('jam_selesai', TRUE);
-  $tempat = $this->input->post('tempat', TRUE);
-  $keterangan = $this->input->post('keterangan', TRUE);
-}else
-{
-  $nama_agenda = $data->nama_agenda;
-  $berapa_hari = $data->berapa_hari;
-  $tgl = $data->tgl;
-  $tgl_mulai = $data->tgl_mulai;
-  $tgl_selesai = $data->tgl_selesai;
-  $jam_mulai = $data->jam_mulai;
-  $jam_selesai = $data->jam_selesai;
-  $tempat = $data->tempat;
-  $keterangan = $data->keterangan;
-}
+$nama_agenda = isset($_POST['submit']) ? $this->input->post('nama_agenda', TRUE) : $data->nama_agenda;
+$berapa_hari = isset($_POST['submit']) ? $this->input->post('berapa_hari', TRUE) : $data->berapa_hari;
+$tgl = isset($_POST['submit']) ? $this->input->post('tgl', TRUE) : $data->tgl;
+$tgl_mulai = isset($_POST['submit']) ? $this->input->post('tgl_mulai', TRUE) : $data->tgl_mulai;
+$tgl_selesai = isset($_POST['submit']) ? $this->input->post('tgl_selesai', TRUE) : $data->tgl_selesai;
+$jam_mulai = isset($_POST['submit']) ? $this->input->post('jam_mulai', TRUE) : $data->jam_mulai;
+$jam_selesai = isset($_POST['submit']) ? $this->input->post('jam_selesai', TRUE) : $data->jam_selesai;
+$tempat = isset($_POST['submit']) ? $this->input->post('tempat', TRUE) : $data->tempat;
+$keterangan = isset($_POST['submit']) ? $this->input->post('keterangan', TRUE) : $data->keterangan;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
