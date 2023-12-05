@@ -1,11 +1,5 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $tahun = $this->input->post('tahun', TRUE);
-}else
-{
-  $tahun = $data->tahun;
-}
+$tahun = isset($_POST['submit']) ? $this->input->post('tahun', TRUE) : $data->tahun;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
