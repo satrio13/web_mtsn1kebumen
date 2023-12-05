@@ -1,15 +1,7 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $nama = $this->input->post('nama', TRUE);
-  $link = $this->input->post('link', TRUE);
-  $is_active = $this->input->post('is_active', TRUE);
-}else
-{
-  $nama = $data->nama;
-  $link = $data->link;
-  $is_active = $data->is_active;
-}
+$nama = isset($_POST['submit']) ? $this->input->post('nama', TRUE) : $data->nama;
+$link = isset($_POST['submit']) ? $this->input->post('link', TRUE) : $data->link;
+$is_active = isset($_POST['submit']) ? $this->input->post('is_active', TRUE) : $data->is_active;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
