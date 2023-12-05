@@ -89,7 +89,7 @@ class Home_model extends CI_Model
     
     function pengunjung()
     {
-        return $this->db->query("SELECT * FROM tb_statistik WHERE tanggal='".date("Y-m-d")."' GROUP BY ip");
+        return $this->db->query("SELECT COUNT(ip) as total FROM tb_statistik WHERE tanggal='".date("Y-m-d")."' GROUP BY ip");
     }
     
     function totalpengunjung()
