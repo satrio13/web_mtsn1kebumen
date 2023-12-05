@@ -1,19 +1,9 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $judul = $this->input->post('judul', TRUE);
-  $keterangan = $this->input->post('keterangan', TRUE);
-  $link = $this->input->post('link', TRUE);
-  $button = $this->input->post('button', TRUE);
-  $is_active = $this->input->post('is_active', TRUE);
-}else
-{
-  $judul = $data->judul;
-  $keterangan = $data->keterangan;
-  $link = $data->link;
-  $button = $data->button;
-  $is_active = $data->is_active;
-}
+$judul = isset($_POST['submit']) ? $this->input->post('judul', TRUE) : $data->judul;
+$keterangan = isset($_POST['submit']) ? $this->input->post('keterangan', TRUE) : $data->keterangan;
+$link = isset($_POST['submit']) ? $this->input->post('link', TRUE) : $data->link;
+$button = isset($_POST['submit']) ? $this->input->post('button', TRUE) : $data->button;
+$is_active = isset($_POST['submit']) ? $this->input->post('is_active', TRUE) : $data->is_active;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
