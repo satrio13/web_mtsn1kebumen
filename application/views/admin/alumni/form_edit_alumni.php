@@ -1,15 +1,7 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $id_tahun = $this->input->post('id_tahun', TRUE);
-  $jml_l = $this->input->post('jml_l', TRUE);
-  $jml_p = $this->input->post('jml_p', TRUE);
-}else
-{
-  $id_tahun = $data->id_tahun;
-  $jml_l = $data->jml_l;
-  $jml_p = $data->jml_p;
-}
+$id_tahun = isset($_POST['submit']) ? $this->input->post('id_tahun', TRUE) : $data->id_tahun;
+$jml_l = isset($_POST['submit']) ? $this->input->post('jml_l', TRUE) : $data->jml_l;
+$jml_p = isset($_POST['submit']) ? $this->input->post('jml_p', TRUE) : $data->jml_p;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
