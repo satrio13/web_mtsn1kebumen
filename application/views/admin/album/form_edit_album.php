@@ -1,13 +1,6 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $album = $this->input->post('album', TRUE);
-  $is_active = $this->input->post('is_active', TRUE);
-}else
-{
-  $album = $data->album;
-  $is_active = $data->is_active;
-}
+$album = isset($_POST['submit']) ? $this->input->post('album', TRUE) : $data->album;
+$is_active = isset($_POST['submit']) ? $this->input->post('is_active', TRUE) : $data->is_active;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
