@@ -1,15 +1,7 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $judul = $this->input->post('judul', TRUE);
-  $keterangan = $this->input->post('keterangan', TRUE);
-  $link = $this->input->post('link', TRUE);
-}else
-{
-  $judul = $data->judul;
-  $keterangan = $data->keterangan;
-  $link = $data->link;
-}
+$judul = isset($_POST['submit']) ? $this->input->post('judul', TRUE) : $data->judul;
+$keterangan = isset($_POST['submit']) ? $this->input->post('keterangan', TRUE) : $data->keterangan;
+$link = isset($_POST['submit']) ? $this->input->post('link', TRUE) : $data->link;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
