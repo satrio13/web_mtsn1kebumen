@@ -1,51 +1,25 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $nama = $this->input->post('nama', TRUE);
-  $nip = $this->input->post('nip', TRUE);
-  $duk = $this->input->post('duk', TRUE);
-  $niplama = $this->input->post('niplama', TRUE);
-  $nuptk = $this->input->post('nuptk', TRUE);
-  $nokarpeg = $this->input->post('nokarpeg', TRUE);
-  $tmp_lahir = $this->input->post('tmp_lahir', TRUE);
-  $tgl_lahir = $this->input->post('tgl_lahir', TRUE);
-  $statuspeg = $this->input->post('statuspeg', TRUE);
-  $golruang = $this->input->post('golruang', TRUE);
-  $tmt_cpns = $this->input->post('tmt_cpns', TRUE);
-  $tmt_pns = $this->input->post('tmt_pns', TRUE);
-  $jk = $this->input->post('jk', TRUE);
-  $agama = $this->input->post('agama', TRUE);
-  $alamat = $this->input->post('alamat', TRUE);
-  $tingkat_pt = $this->input->post('tingkat_pt', TRUE);
-  $prodi = $this->input->post('prodi', TRUE);
-  $th_lulus = $this->input->post('th_lulus', TRUE);
-  $status = $this->input->post('status', TRUE);
-  $statusguru = $this->input->post('statusguru', TRUE);
-  $email = $this->input->post('email', TRUE);
-}else
-{
-  $nama = $data->nama;
-  $nip = $data->nip;
-  $duk = $data->duk;
-  $niplama = $data->niplama;
-  $nuptk = $data->nuptk;
-  $nokarpeg = $data->nokarpeg;
-  $tmp_lahir = $data->tmp_lahir;
-  $tgl_lahir = $data->tgl_lahir;
-  $statuspeg = $data->statuspeg;
-  $golruang = $data->golruang;
-  $tmt_cpns = $data->tmt_cpns;
-  $tmt_pns = $data->tmt_pns;
-  $jk = $data->jk;
-  $agama = $data->agama;
-  $alamat = $data->alamat;
-  $tingkat_pt = $data->tingkat_pt;
-  $prodi = $data->prodi;
-  $th_lulus = $data->th_lulus;
-  $status = $data->status;
-  $statusguru = $data->statusguru;
-  $email = $data->email;
-}
+$nama = isset($_POST['submit']) ? $this->input->post('nama', TRUE) : $data->nama;
+$nip = isset($_POST['submit']) ? $this->input->post('nip', TRUE) : $data->nip;
+$duk = isset($_POST['submit']) ? $this->input->post('duk', TRUE) : $data->duk;
+$niplama = isset($_POST['submit']) ? $this->input->post('niplama', TRUE) : $data->niplama;
+$nuptk = isset($_POST['submit']) ? $this->input->post('nuptk', TRUE) : $data->nuptk;
+$nokarpeg = isset($_POST['submit']) ? $this->input->post('nokarpeg', TRUE) : $data->nokarpeg;
+$tmp_lahir = isset($_POST['submit']) ? $this->input->post('tmp_lahir', TRUE) : $data->tmp_lahir;
+$tgl_lahir = isset($_POST['submit']) ? $this->input->post('tgl_lahir', TRUE) : $data->tgl_lahir;
+$statuspeg = isset($_POST['submit']) ? $this->input->post('statuspeg', TRUE) : $data->statuspeg;
+$golruang = isset($_POST['submit']) ? $this->input->post('golruang', TRUE) : $data->golruang;
+$tmt_cpns = isset($_POST['submit']) ? $this->input->post('tmt_cpns', TRUE) : $data->tmt_cpns;
+$tmt_pns = isset($_POST['submit']) ? $this->input->post('tmt_pns', TRUE) : $data->tmt_pns;
+$jk = isset($_POST['submit']) ? $this->input->post('jk', TRUE) : $data->jk;
+$agama = isset($_POST['submit']) ? $this->input->post('agama', TRUE) : $data->agama;
+$alamat = isset($_POST['submit']) ? $this->input->post('alamat', TRUE) : $data->alamat;
+$tingkat_pt = isset($_POST['submit']) ? $this->input->post('tingkat_pt', TRUE) : $data->tingkat_pt;
+$prodi = isset($_POST['submit']) ? $this->input->post('prodi', TRUE) : $data->prodi;
+$th_lulus = isset($_POST['submit']) ? $this->input->post('th_lulus', TRUE) : $data->th_lulus;
+$status = isset($_POST['submit']) ? $this->input->post('status', TRUE) : $data->status;
+$statusguru = isset($_POST['submit']) ? $this->input->post('statusguru', TRUE) : $data->statusguru;
+$email = isset($_POST['submit']) ? $this->input->post('email', TRUE) : $data->email;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
