@@ -1,13 +1,6 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $nama_file = $this->input->post('nama_file', TRUE);
-  $is_active = $this->input->post('is_active', TRUE);
-}else
-{
-  $nama_file = $data->nama_file;
-  $is_active = $data->is_active;
-}
+$nama_file = isset($_POST['submit']) ? $this->input->post('nama_file', TRUE) : $data->nama_file;
+$is_active = isset($_POST['submit']) ? $this->input->post('is_active', TRUE) : $data->is_active;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
