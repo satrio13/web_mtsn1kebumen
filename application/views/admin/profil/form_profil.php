@@ -1,45 +1,22 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $nama_web = $this->input->post('nama_web', TRUE);
-  $jenjang = $this->input->post('jenjang', TRUE);
-  $meta_description = $this->input->post('meta_description', TRUE);
-  $meta_keyword = $this->input->post('meta_keyword', TRUE);
-  $profil = $this->input->post('profil', TRUE);
-  $alamat = $this->input->post('alamat', TRUE);
-  $email = $this->input->post('email', TRUE);
-  $telp = $this->input->post('telp', TRUE);
-  $fax = $this->input->post('fax', TRUE);
-  $whatsapp = $this->input->post('whatsapp', TRUE);
-  $akreditasi = $this->input->post('akreditasi', TRUE);
-  $kurikulum = $this->input->post('kurikulum', TRUE);
-  $nama_kepsek = $this->input->post('nama_kepsek', TRUE);
-  $nama_operator = $this->input->post('nama_operator', TRUE);
-  $instagram = $this->input->post('instagram', TRUE);
-  $facebook = $this->input->post('facebook', TRUE);
-  $twitter = $this->input->post('twitter', TRUE);
-  $youtube = $this->input->post('youtube', TRUE);
-}else
-{
-  $nama_web = $data->nama_web;
-  $jenjang = $data->jenjang;
-  $meta_description = $data->meta_description;
-  $meta_keyword = $data->meta_keyword;
-  $profil = $data->profil;
-  $alamat = $data->alamat;
-  $email = $data->email;
-  $telp = $data->telp;
-  $fax = $data->fax;
-  $whatsapp = $data->whatsapp;
-  $akreditasi = $data->akreditasi;
-  $kurikulum = $data->kurikulum;
-  $nama_kepsek = $data->nama_kepsek;
-  $nama_operator = $data->nama_operator;
-  $instagram = $data->instagram;
-  $facebook = $data->facebook;
-  $twitter = $data->twitter;
-  $youtube = $data->youtube;
-}
+$nama_web = isset($_POST['submit']) ? $this->input->post('nama_web', TRUE) : $data->nama_web;
+$jenjang = isset($_POST['submit']) ? $this->input->post('jenjang', TRUE) : $data->jenjang;
+$meta_description = isset($_POST['submit']) ? $this->input->post('meta_description', TRUE) : $data->meta_description;
+$meta_keyword = isset($_POST['submit']) ? $this->input->post('meta_keyword', TRUE) : $data->meta_keyword;
+$profil = isset($_POST['submit']) ? $this->input->post('profil', TRUE) : $data->profil;
+$alamat = isset($_POST['submit']) ? $this->input->post('alamat', TRUE) : $data->alamat;
+$email = isset($_POST['submit']) ? $this->input->post('email', TRUE) : $data->email;
+$telp = isset($_POST['submit']) ? $this->input->post('telp', TRUE) : $data->telp;
+$fax = isset($_POST['submit']) ? $this->input->post('fax', TRUE) : $data->fax;
+$whatsapp = isset($_POST['submit']) ? $this->input->post('whatsapp', TRUE) : $data->whatsapp;
+$akreditasi = isset($_POST['submit']) ? $this->input->post('akreditasi', TRUE) : $data->akreditasi;
+$kurikulum = isset($_POST['submit']) ? $this->input->post('kurikulum', TRUE) : $data->kurikulum;
+$nama_kepsek = isset($_POST['submit']) ? $this->input->post('nama_kepsek', TRUE) : $data->nama_kepsek;
+$nama_operator = isset($_POST['submit']) ? $this->input->post('nama_operator', TRUE) : $data->nama_operator;
+$instagram = isset($_POST['submit']) ? $this->input->post('instagram', TRUE) : $data->instagram;
+$facebook = isset($_POST['submit']) ? $this->input->post('facebook', TRUE) : $data->facebook;
+$twitter = isset($_POST['submit']) ? $this->input->post('twitter', TRUE) : $data->twitter;
+$youtube = isset($_POST['submit']) ? $this->input->post('youtube', TRUE) : $data->youtube;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
