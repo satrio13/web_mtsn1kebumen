@@ -1,19 +1,9 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $id_tahun = $this->input->post('mapel', TRUE);
-  $id_kurikulum = $this->input->post('id_kurikulum', TRUE);
-  $tertinggi = $this->input->post('tertinggi', TRUE);
-  $terendah = $this->input->post('terendah', TRUE);
-  $rata = $this->input->post('rata', TRUE);
-}else
-{
-  $id_tahun = $data->id_tahun;
-  $id_kurikulum = $data->id_kurikulum;
-  $tertinggi = $data->tertinggi;
-  $terendah = $data->terendah;
-  $rata = $data->rata;
-}
+$id_tahun = isset($_POST['submit']) ? $this->input->post('id_tahun', TRUE) : $data->id_tahun;
+$id_kurikulum = isset($_POST['submit']) ? $this->input->post('id_kurikulum', TRUE) : $data->id_kurikulum;
+$tertinggi = isset($_POST['submit']) ? $this->input->post('tertinggi', TRUE) : $data->tertinggi;
+$terendah = isset($_POST['submit']) ? $this->input->post('terendah', TRUE) : $data->terendah;
+$rata = isset($_POST['submit']) ? $this->input->post('rata', TRUE) : $data->rata;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
