@@ -1,23 +1,11 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $id_tahun = $this->input->post('id_tahun', TRUE);
-  $jml1pa = $this->input->post('jml1pa', TRUE);
-  $jml1pi = $this->input->post('jml1pi', TRUE);
-  $jml2pa = $this->input->post('jml2pa', TRUE);
-  $jml2pi = $this->input->post('jml2pi', TRUE);
-  $jml3pa = $this->input->post('jml3pa', TRUE);
-  $jml3pi = $this->input->post('jml3pi', TRUE);
-}else
-{
-  $id_tahun = $data->id_tahun;
-  $jml1pa = $data->jml1pa;
-  $jml1pi = $data->jml1pi;
-  $jml2pa = $data->jml2pa;
-  $jml2pi = $data->jml2pi;
-  $jml3pa = $data->jml3pa;
-  $jml3pi = $data->jml3pi;
-}
+$id_tahun = isset($_POST['submit']) ? $this->input->post('id_tahun', TRUE) : $data->id_tahun;
+$jml1pa = isset($_POST['submit']) ? $this->input->post('jml1pa', TRUE) : $data->jml1pa;
+$jml1pi = isset($_POST['submit']) ? $this->input->post('jml1pi', TRUE) : $data->jml1pi;
+$jml2pa = isset($_POST['submit']) ? $this->input->post('jml2pa', TRUE) : $data->jml2pa;
+$jml2pi = isset($_POST['submit']) ? $this->input->post('jml2pi', TRUE) : $data->jml2pi;
+$jml3pa = isset($_POST['submit']) ? $this->input->post('jml3pa', TRUE) : $data->jml3pa;
+$jml3pi = isset($_POST['submit']) ? $this->input->post('jml3pi', TRUE) : $data->jml3pi;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
