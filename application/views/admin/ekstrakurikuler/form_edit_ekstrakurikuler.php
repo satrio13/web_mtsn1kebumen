@@ -1,13 +1,6 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $nama_ekstrakurikuler = $this->input->post('nama_ekstrakurikuler', TRUE);
-  $keterangan = $this->input->post('keterangan', TRUE);
-}else
-{
-  $nama_ekstrakurikuler = $data->nama_ekstrakurikuler;
-  $keterangan = $data->keterangan;
-}
+$nama_ekstrakurikuler = isset($_POST['submit']) ? $this->input->post('nama_ekstrakurikuler', TRUE) : $data->nama_ekstrakurikuler;
+$keterangan = isset($_POST['submit']) ? $this->input->post('keterangan', TRUE) : $data->keterangan;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
