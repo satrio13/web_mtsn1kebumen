@@ -1,21 +1,10 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $id_tahun = $this->input->post('id_tahun', TRUE);
-  $jenis = $this->input->post('jenis', TRUE);
-  $nama = $this->input->post('nama', TRUE);
-  $prestasi = $this->input->post('prestasi', TRUE);
-  $tingkat = $this->input->post('tingkat', TRUE);
-  $keterangan = $this->input->post('keterangan', TRUE);
-}else
-{
-  $id_tahun = $data->id_tahun;
-  $jenis = $data->jenis;
-  $nama = $data->nama;
-  $prestasi = $data->prestasi;
-  $tingkat = $data->tingkat;
-  $keterangan = $data->keterangan;
-}
+$id_tahun = isset($_POST['submit']) ? $this->input->post('id_tahun', TRUE) : $data->id_tahun;
+$jenis = isset($_POST['submit']) ? $this->input->post('jenis', TRUE) : $data->jenis;
+$nama = isset($_POST['submit']) ? $this->input->post('nama', TRUE) : $data->nama;
+$prestasi = isset($_POST['submit']) ? $this->input->post('prestasi', TRUE) : $data->prestasi;
+$tingkat = isset($_POST['submit']) ? $this->input->post('tingkat', TRUE) : $data->tingkat;
+$keterangan = isset($_POST['submit']) ? $this->input->post('keterangan', TRUE) : $data->keterangan;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
