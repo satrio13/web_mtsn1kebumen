@@ -1,19 +1,9 @@
 <?php
-if(isset($_POST['submit']))
-{
-  $mapel = $this->input->post('mapel', TRUE);
-  $kelompok = $this->input->post('kelompok', TRUE);
-  $no_urut = $this->input->post('no_urut', TRUE);
-  $alokasi = $this->input->post('alokasi', TRUE);
-  $is_active = $this->input->post('is_active', TRUE);
-}else
-{
-  $mapel = $data->mapel;
-  $kelompok = $data->kelompok;
-  $no_urut = $data->no_urut;
-  $alokasi = $data->alokasi;
-  $is_active = $data->is_active;
-}
+$mapel = isset($_POST['submit']) ? $this->input->post('mapel', TRUE) : $data->mapel;
+$kelompok = isset($_POST['submit']) ? $this->input->post('kelompok', TRUE) : $data->kelompok;
+$no_urut = isset($_POST['submit']) ? $this->input->post('no_urut', TRUE) : $data->no_urut;
+$alokasi = isset($_POST['submit']) ? $this->input->post('alokasi', TRUE) : $data->alokasi;
+$is_active = isset($_POST['submit']) ? $this->input->post('is_active', TRUE) : $data->is_active;
 ?>
 <div class="content-wrapper">
   <div class="content-header">
