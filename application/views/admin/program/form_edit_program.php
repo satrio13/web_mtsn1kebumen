@@ -1,3 +1,7 @@
+<?php
+$nama = isset($_POST['submit']) ? $this->input->post('nama', TRUE) : $data->nama;
+$keterangan = isset($_POST['submit']) ? $this->input->post('keterangan', TRUE) : $data->keterangan;
+?>
 <div class="content-wrapper">
   <div class="content-header">
     <div class="container-fluid">
@@ -37,13 +41,13 @@
                     <div class="form-group row">
                         <label for="inputEmail3" class="col-sm-2 col-form-label">NAMA PROGRAM *</label>
                         <div class="col-sm-8">
-                            <input type="text" name="nama" maxlength="30" value="<?= $data->nama; ?>" class="form-control" id="inputEmail3" placeholder="NAMA PROGRAM" readonly>
+                            <input type="text" name="nama" maxlength="30" value="<?= $nama; ?>" class="form-control" id="inputEmail3" placeholder="NAMA PROGRAM" readonly>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputEmail3" class="col-sm-2 col-form-label">KETERANGAN *</label>
                         <div class="col-sm-8">
-                            <textarea class="textarea" name="keterangan"><?= $data->keterangan; ?></textarea>
+                            <textarea class="textarea" name="keterangan"><?= $keterangan; ?></textarea>
                             <?= form_error('keterangan'); ?>
                         </div>
                     </div>
